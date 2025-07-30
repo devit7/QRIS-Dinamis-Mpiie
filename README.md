@@ -78,19 +78,7 @@ cp .env.example .env.local
 5. **Buka browser**
 Akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
 
-## ⚙️ Environment Variables
 
-Untuk menggunakan fitur analytics dan SEO penuh, setup environment variables berikut:
-
-```env
-# SEO & Analytics
-NEXT_PUBLIC_SITE_URL=https://qris-dinamis.vercel.app
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_GTM_ID=GTM-XXXXXXXX
-
-# Verification Codes
-NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code
-```
 
 ## 📖 Cara Penggunaan### 1. Input via Text Code
 
@@ -114,75 +102,6 @@ NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=your-verification-code
 
 - Klik icon download di bagian preview
 - QR code akan tersimpan sebagai file JPG
-
-## 📁 Struktur Project
-
-```
-src/
-├── app/                    # App router pages
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout dengan SEO
-│   ├── page.tsx           # Home page
-│   ├── sitemap.ts         # Sitemap generator
-│   ├── robots.ts          # Robots.txt generator  
-│   └── manifest.ts        # PWA manifest
-├── components/            # React components
-│   ├── analytics/         # Google Analytics components
-│   ├── seo/              # SEO components
-│   ├── form-qris-change/  # Form untuk mengubah QRIS
-│   ├── form-qris-image/   # Form upload image
-│   ├── form-qris-string/  # Form input text
-│   ├── json-template/     # Template JSON viewer
-│   ├── navigation/        # Navigation component
-│   ├── qris-image/        # Preview QR image
-│   ├── theme/            # Theme provider
-│   ├── theme-button/     # Theme toggle button
-│   └── ui/               # UI components (shadcn)
-├── lib/                  # Utilities dan libraries
-│   ├── store/            # Zustand store
-│   ├── qris-decoder/     # Custom QRIS decoder
-│   ├── seo-config.ts     # SEO configuration
-│   ├── seo-utils.ts      # SEO utility functions
-│   └── utils.ts          # Utility functions
-└── types/               # TypeScript type definitions
-```
-
-## � Responsive Design
-
-Aplikasi ini telah dioptimasi untuk berbagai ukuran layar:
-- 📱 Mobile (360px+)
-- 📱 Tablet (768px+)  
-- 💻 Desktop (1024px+)
-
-## 🔍 SEO Features
-
-Website ini telah dioptimasi untuk search engines dengan:
-
-### ✅ Technical SEO
-- **Meta Tags**: Title, description, keywords yang relevan
-- **Open Graph**: Social media sharing optimization
-- **Twitter Cards**: Twitter sharing optimization  
-- **JSON-LD**: Structured data untuk search engines
-- **Sitemap**: Otomatis generate sitemap.xml
-- **Robots.txt**: Search engine crawling guidelines
-- **Canonical URLs**: Mencegah duplicate content
-
-### ✅ Performance SEO
-- **Core Web Vitals**: Optimized loading speed
-- **Image Optimization**: Next.js Image component
-- **Font Optimization**: Google Fonts optimization
-- **Mobile-First**: Responsive design approach
-
-### ✅ Content SEO
-- **Semantic HTML**: Proper HTML structure
-- **Alt Text**: Images dengan alt text yang descriptive
-- **Heading Structure**: Proper H1-H6 hierarchy
-- **Internal Linking**: Strategic internal links
-
-### ✅ Analytics Ready
-- **Google Analytics**: Event tracking support
-- **Google Tag Manager**: Tag management support
-- **Custom Events**: User interaction tracking
 
 ## ���🔧 Konfigurasi
 
