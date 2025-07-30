@@ -38,7 +38,7 @@ export default function Home() {
           </Tabs>
           <JsonTemplate />
         </div >
-        <div className=" w-full lg:w-[50%] px-10 lg:px-0 sm:mt-10 lg:mt-0">
+        <div className=" w-full lg:w-[50%] px-0 sm:px-5 lg:px-0 sm:mt-10 lg:mt-0">
           <div className=" flex flex-col gap-4">
             {/* Input Nominal */}
             {merchant ?
