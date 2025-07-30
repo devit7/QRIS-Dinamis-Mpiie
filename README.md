@@ -70,15 +70,14 @@ bun dev
 ```
 
 4. **Setup Environment Variables (Optional)**
+
 ```bash
 cp .env.example .env.local
 # Edit .env.local dengan konfigurasi Anda
 ```
 
 5. **Buka browser**
-Akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
-
-
+   Akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
 
 ## 📖 Cara Penggunaan### 1. Input via Text Code
 
@@ -113,7 +112,6 @@ Project ini menggunakan konfigurasi standar Next.js dengan tambahan:
 - **PostCSS**: Untuk CSS processing
 - **SEO**: Metadata API, JSON-LD, Sitemap/Robots
 - **PWA**: Manifest dan service worker ready
-
 
 ## 🙏 Acknowledgments
 
