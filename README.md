@@ -1,36 +1,136 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# QRIS Dinamis Generator
 
-## Getting Started
+Aplikasi web untuk menggenerate QRIS (Quick Response Code Indonesian Standard) dinamis dengan nominal yang dapat disesuaikan. Aplikasi ini memungkinkan pengguna untuk mengubah nominal pembayaran pada QR code yang sudah ada.
 
-First, run the development server:
+![Preview Web](public/preview-web.png)
+
+## ✨ Fitur
+
+- 🔄 **Generate QRIS Dinamis**: Upload gambar QR code dan ubah nominal pembayaran
+- 📝 **Input Text Code**: Masukkan kode QRIS dalam format text untuk diproses
+- 🖼️ **Upload Image**: Upload gambar QR code untuk didecode dan dimodifikasi
+- 📊 **Merchant Information**: Tampilkan informasi merchant secara detail dalam format JSON
+- 💰 **Custom Nominal**: Ubah nominal pembayaran sesuai kebutuhan
+- 📱 **Preview Real-time**: Lihat preview QR code yang sudah dimodifikasi
+- 💾 **Download QR**: Download QR code yang sudah dimodifikasi dalam format gambar
+- 🌙 **Dark/Light Theme**: Toggle antara tema gelap dan terang
+
+## 🛠️ Teknologi yang Digunakan
+
+- **Framework**: [Next.js 14](https://nextjs.org) dengan App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn/ui
+- **State Management**: Zustand
+- **QR Processing**: Custom QRIS decoder
+- **Canvas**: html2canvas-pro untuk export gambar
+
+## 📋 Prerequisites
+
+Pastikan Anda memiliki yang berikut ini terinstall:
+
+- Node.js (versi 18 atau lebih baru)
+- npm, yarn, pnpm, atau bun
+
+## 🚀 Getting Started
+
+1. **Clone repository**
+
+```bash
+git clone <repository-url>
+cd nextjs-qris-dinamis
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+# atau
+yarn install
+# atau
+pnpm install
+# atau
+bun install
+```
+
+3. **Jalankan development server**
 
 ```bash
 npm run dev
-# or
+# atau
 yarn dev
-# or
+# atau
 pnpm dev
-# or
+# atau
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Buka browser**
+   Akses [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Cara Penggunaan
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Input via Text Code
 
-## Learn More
+- Pilih tab "Text Code"
+- Paste kode QRIS dalam format text
+- Aplikasi akan otomatis decode informasi merchant
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Input via Image Upload
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Pilih tab "Image"
+- Upload gambar QR code yang valid
+- Aplikasi akan memproses dan extract informasi
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Modifikasi Nominal
 
-## Deploy on Vercel
+- Masukkan nominal baru di field "Nominal"
+- Klik "Generate" untuk membuat QR code baru
+- Preview akan menampilkan QR code yang sudah dimodifikasi
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Download QR Code
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Klik icon download di bagian preview
+- QR code akan tersimpan sebagai file JPG
+
+## 📁 Struktur Project
+
+```
+src/
+├── app/                    # App router pages
+│   ├── globals.css        # Global styles
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── form-qris-change/  # Form untuk mengubah QRIS
+│   ├── form-qris-image/   # Form upload image
+│   ├── form-qris-string/  # Form input text
+│   ├── json-template/     # Template JSON viewer
+│   ├── navigation/        # Navigation component
+│   ├── qris-image/        # Preview QR image
+│   ├── theme/            # Theme provider
+│   ├── theme-button/     # Theme toggle button
+│   └── ui/               # UI components (shadcn)
+├── lib/                  # Utilities dan libraries
+│   ├── store/            # Zustand store
+│   ├── qris-decoder/     # Custom QRIS decoder
+│   └── utils.ts          # Utility functions
+└── types/               # TypeScript type definitions
+```
+
+## 🔧 Konfigurasi
+
+Project ini menggunakan konfigurasi standar Next.js dengan tambahan:
+
+- **Tailwind CSS**: Untuk styling
+- **TypeScript**: Untuk type safety
+- **ESLint**: Untuk code linting
+- **PostCSS**: Untuk CSS processing
+
+
+## 🙏 Acknowledgments
+
+- [Next.js](https://nextjs.org) - React framework
+- [Tailwind CSS](https://tailwindcss.com) - CSS framework
+- [Shadcn/ui](https://ui.shadcn.com) - UI components
+- [Zustand](https://github.com/pmndrs/zustand) - State management
