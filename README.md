@@ -1,7 +1,7 @@
 # QRIS Dinamis Generator
 
 Aplikasi web untuk menggenerate QRIS (Quick Response Code Indonesian Standard) dinamis dengan nominal yang dapat disesuaikan. Aplikasi ini memungkinkan pengguna untuk mengubah nominal pembayaran pada QR code yang sudah ada.
-
+https://qris-dinamis-mpiie.vercel.app/
 ![Preview Web](public/preview-web.png)
 
 ## ✨ Fitur
